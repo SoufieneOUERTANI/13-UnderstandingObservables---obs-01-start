@@ -39,3 +39,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     ngOnDestroy(): void {
         this.firstSubscription.unsubscribe();
     }
+
+## 260 - Building a Custom Observable : Observable.create(observer => {.. observer.next(...) }) 
+
+    const customIntervalObservable = Observable.create(observer => {
+      let count = 0;
+      setInterval(()=>{
+        observer.next(count);
+        count++;
+      },1000)
+    });
+    this.firstSubscription = customIntervalObservable.subscribe(data =>{
+      console.log(data);
+    });
