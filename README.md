@@ -52,3 +52,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     this.firstSubscription = customIntervalObservable.subscribe(data =>{
       console.log(data);
     });
+
+## 261. Errors & Completion : observer.error(), observer.complete() 
+
+        if(count == 2){
+          observer.complete();
+        }
+        if(count > 3){
+          observer.error(new Error('counter is greater than 3 !'));
+        }
+
+
+        }, error => {
+          console.log(error);
+          alert(error.message);
+        },() => {
+          console.log('completed !');
