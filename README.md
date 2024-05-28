@@ -26,6 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Documentation :
+    https://www.learnrxjs.io/
+
 ## 259 - Getting Closer to the Core of Observables - Subscription, ngOnInit : subscribe, ngOnDestroy : unsubscribe
 
     private firstSubscription : Subscription;
@@ -68,3 +71,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
           alert(error.message);
         },() => {
           console.log('completed !');
+
+## 263. Understanding Operators : pipe, filter, map
+
+    this.firstSubscription = customIntervalObservable
+    .pipe(filter((data: number) => {
+      return data > 0;
+    }), map((data: number) => {
+      return 'Round: ' + (data + 1);
+    }))
+
+    .subscribe(data =>{
