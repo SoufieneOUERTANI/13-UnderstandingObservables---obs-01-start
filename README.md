@@ -106,3 +106,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
       )
 
       this.activatedEmitterSubscribtion.unsubscribe;
+
+## 266. Useful Resources & Links
+  
+  Useful Resources:
+
+    Official Docs: https://rxjs-dev.firebaseapp.com/
+
+    RxJS Series: https://academind.com/learn/javascript/understanding-rxjs/
+
+    Updating to RxJS 6: https://academind.com/learn/javascript/rxjs-6-what-changed/
