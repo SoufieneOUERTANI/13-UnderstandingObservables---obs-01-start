@@ -93,3 +93,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         didActivate => this.userActivated = didActivate 
       )
 
+  ### Second approach with Subject in userService
+  ===> Subject is a special observable that, unlike others passive observables, you can activate the "next" method on outside, so you can use it as EventEmitter
+  ===> It is a cross-components(used between different components) tools, whe, using services(unlike @output)
+
+      activatedEmitter = new Subject<boolean>();
+
+      this.userService.activatedEmitter.next(true);
+
+      this.userService.activatedEmitter.subscribe(
+        didActivate => this.userActivated = didActivate 
+      )
+
+      this.activatedEmitterSubscribtion.unsubscribe;
