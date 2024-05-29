@@ -82,3 +82,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     }))
 
     .subscribe(data =>{
+
+## 264. Subjects
+  ### First approach with EventEmitter in userService
+      activatedEmitter = new EventEmitter<boolean>();
+
+      this.userService.activatedEmitter.emit(true);
+
+      this.userService.activatedEmitter.subscribe(
+        didActivate => this.userActivated = didActivate 
+      )
+
